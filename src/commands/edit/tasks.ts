@@ -1,0 +1,13 @@
+import { Command } from '@/types';
+
+export default {
+    define: (builder) => builder
+        .setDescription('Edit tasks')
+        .addStringOption((option) => option
+            .setName('name')
+            .setDescription('What the task is called')
+        ),
+    handle: async (interaction) => {
+        await interaction.reply('Not implemented');
+    }
+} satisfies Command;

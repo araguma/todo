@@ -1,0 +1,45 @@
+{
+    "name": "todo",
+    "version": "1.0.0",
+    "description": "Self-hosted Discord task management bot",
+    "keywords": [
+        "todo"
+    ],
+    "homepage": "https://github.com/araguma/todo#readme",
+    "bugs": {
+        "url": "https://github.com/araguma/todo/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/araguma/todo.git"
+    },
+    "license": "MIT",
+    "author": "araguma",
+    "main": "dist/index.js",
+    "scripts": {
+        "clean": "npx du rm -rf dist/ && npx du mkdir dist/",
+        "build": "npx du cp -rfi /.ts/ src/ dist/ && npx tsc && npx tsc-alias",
+        "start": "npx ts-node --transpile-only src/index.ts",
+        "watch": "npx nodemon"
+    },
+    "dependencies": {
+        "canvas": "^2.11.2",
+        "cron": "^3.1.5",
+        "discord.js": "^14.13.0",
+        "glob": "^10.3.10",
+        "humanize-duration": "^3.30.0",
+        "mongodb": "^6.2.0",
+        "parse-duration": "^1.1.0"
+    },
+    "devDependencies": {
+        "@types/humanize-duration": "^3.27.1",
+        "@types/node": "^20.8.5",
+        "dev-utils": "github:araguma/npm-dev-utils",
+        "dotenv": "^16.3.1",
+        "nodemon": "^3.0.1",
+        "ts-node": "^10.9.1",
+        "tsc-alias": "^1.8.8",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.2.2"
+    }
+}
